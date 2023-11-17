@@ -1,18 +1,18 @@
 name: 'Deploy Azure SQL Database schema'
 
-# on:
-#   push:
-#     branches:
-#       - main
-#   pull_request:
-#     types: [opened, synchronize, reopened, closed]
-#     branches:
-#       - main
-
 on:
   push:
     branches:
-      - lab2-2023
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+
+# on:
+#   push:
+#     branches:
+#       - lab2-2023
 
 jobs:
   deploy_database_job:
