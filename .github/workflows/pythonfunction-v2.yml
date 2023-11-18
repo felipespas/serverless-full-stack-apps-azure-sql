@@ -47,6 +47,12 @@ jobs:
         echo "" > requirements.txt # blank out requirements.txt so it doesn't get installed again
       working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
 
+    # tentativa 2   
+    - name: Install dependencies v2
+      run: |
+        pip install --target="./.python_packages/lib/site-packages" -r ./requirements.txt
+      working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+
     - name: Install library using npm
       run: |
         npm install -g azure-functions-core-tools
