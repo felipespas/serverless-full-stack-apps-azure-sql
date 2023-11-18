@@ -39,15 +39,24 @@ jobs:
         sudo apt-get install -y python3.9
       shell: bash
 
+    # ORIGINAL
+    # - name: Install dependencies
+    #   run: |
+    #     python -m venv .venv
+    #     source .venv/bin/activate
+    #     python -m pip install -r requirements.txt
+    #     echo "" > requirements.txt # blank out requirements.txt so it doesn't get installed again
+    #   working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+
+    # TENTATIVA 1
     - name: Install dependencies
       run: |
         python -m venv .venv
         source .venv/bin/activate
-        python -m pip install -r requirements.txt
-        echo "" > requirements.txt # blank out requirements.txt so it doesn't get installed again
+        python -m pip install -r requirements.txt        
       working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
 
-    # tentativa 2   
+    # TENTATIVA 2   
     - name: Install dependencies v2
       run: |
         pip install --target="./.python_packages/lib/site-packages" -r ./requirements.txt
