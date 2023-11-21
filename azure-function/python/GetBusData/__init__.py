@@ -42,6 +42,8 @@ def main(GetBusData: func.TimerRequest) -> None:
     logging.info(f"{geo_fences=}")
 
     ## Send notifications. 
-    for fence in geo_fences:
-        logging.info(f"Vehicle {fence['VehicleId']}, route {fence['RouteId']}, status: {fence['GeoFenceStatus']} at {fence['TimestampUTC']} UTC")
+    for fence in geo_fences:        
+        # logging.info(f"Vehicle {fence['VehicleId']}, route {fence['RouteId']}, status: {fence['GeoFenceStatus']} at {fence['TimestampUTC']} UTC")
+        logging.warning(f"Vehicle {fence['VehicleId']}, route {fence['RouteId']}, status: {fence['GeoFenceStatus']} at {fence['TimestampUTC']} UTC")
         trigger_logic_app(fence, LOGIC_APP_URL)
+        
