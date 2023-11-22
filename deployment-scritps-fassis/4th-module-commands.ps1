@@ -20,7 +20,7 @@ $appRepository = "https://github.com/felipespas/serverless-full-stack-apps-azure
 
 # Get user's GitHub personal access token
 # $githubToken = (Read-Host "In your GitHub account settings, near the bottom left, select Developer settings > Personal access tokens > check all boxes and generate the token. Enter the token").ToString()
-$githubToken = "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"
+$githubToken = ""
 
 # App service plan name
 # $appServicePlanName = (Get-AzAppServicePlan -resourceGroupName $resourceGroupName).Name
