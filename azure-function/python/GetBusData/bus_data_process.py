@@ -64,7 +64,9 @@ def get_monitored_routes(conn) -> list[int]:
 def trigger_logic_app(fence, logic_app_url: str) -> None:
         content = {
             "value1": str(fence["VehicleId"]), 
-            "value2": str(fence["GeoFenceStatus"])
+            "value2": str(fence["GeoFenceStatus"]),
+            "value3": str(fence["GeoFence"]),
+            "value3": str(fence["RouteName"])
         }
 
         logging.info("Calling Logic App webhook for {0}".format(fence["VehicleId"]))
