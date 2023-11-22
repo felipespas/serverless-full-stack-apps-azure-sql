@@ -66,7 +66,7 @@ def trigger_logic_app(fence, logic_app_url: str) -> None:
             "value1": str(fence["VehicleId"]), 
             "value2": str(fence["GeoFenceStatus"]),
             "value3": str(fence["GeoFence"]),
-            "value3": str(fence["RouteName"])
+            "value4": str(fence["RouteName"])
         }
 
         logging.info("Calling Logic App webhook for {0}".format(fence["VehicleId"]))
