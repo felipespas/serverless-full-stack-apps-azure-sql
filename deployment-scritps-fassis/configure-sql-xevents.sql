@@ -24,7 +24,7 @@ The secret is the SAS token for the container. The Read, Write, and List permiss
 */
 CREATE DATABASE SCOPED CREDENTIAL [https://storageaccount255980.blob.core.windows.net/database-xevents]
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-     SECRET = 'sp=rwl&st=2023-11-21T17:45:14Z&se=2023-11-22T01:45:14Z&spr=https&sv=2022-11-02&sr=c&sig=JuQYF%2B2jjOcl0INhlLqWlmt%2BiUdCgQFnsgyZpXt5Uj8%3D';
+     SECRET = '';
 GO
 
 
