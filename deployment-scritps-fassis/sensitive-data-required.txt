@@ -1,0 +1,23 @@
+## sql password:
+$password = "REDATED"
+
+## sql server logical instance:
+bus-serverXXXXXX.database.windows.net
+
+## connection string (sql)
+Server=tcp:bus-serverXXXXXX.database.windows.net,1433;Initial Catalog=bus-db;User ID=cloudadmin;Password=REDATED;Connection Timeout=30;
+
+## connection string + protocol (sql)
+Server=bus-serverXXXXXX.database.windows.net,1433;Initial Catalog=bus-db;User ID=cloudadmin;Password=REDATED;Connection Timeout=30;
+
+## connection string + driver (sql)
+Driver={ODBC Driver 17 for SQL Server};Server=bus-serverXXXXXX.database.windows.net,1433;Database=bus-db;UID=cloudadmin;PWD=REDATED;Connection Timeout=30;
+
+## logic app http post url (obtained in the logic app designer first activity/when a http request is received)
+https://prod-71.eastus.logic.azure.com:443/workflows/REDATED
+
+## storage account secret to create the extended event:
+sp=rwl&st=2023-11-21T17:45:14Z&se=2023-11-22T01:45:14Z&spr=https&sv=2022-11-02&sr=REDATED
+
+## personal access token to deploy the static web app using github actions:
+ghp_C4hC8rELTfMu5n...REDATED
